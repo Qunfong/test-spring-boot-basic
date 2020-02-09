@@ -4,8 +4,11 @@ import com.springboottesting.basic.model.Book;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.junit4.SpringRunner;
+
 import java.util.List;
 
 import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
@@ -13,6 +16,7 @@ import static org.apache.commons.lang3.RandomStringUtils.randomNumeric;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@RunWith(SpringRunner.class)
 public class SpringBootBootstrapLiveTest {
     private static final String API_ROOT = "http://localhost:8081/api/books";
 
